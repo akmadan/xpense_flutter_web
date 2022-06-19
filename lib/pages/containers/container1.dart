@@ -76,7 +76,7 @@ class _Container1State extends State<Container1> {
 
   Widget DesktopContainer1() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: w! / 10),
+      margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -96,7 +96,7 @@ class _Container1State extends State<Container1> {
                 ),
                 Text(
                   'Helps you to organize your income and expenses',
-                  style: TextStyle(color: Colors.grey.shade600, fontSize: 16),
+                  style: TextStyle(color: Colors.grey.shade400, fontSize: 16),
                 ),
                 SizedBox(
                   height: 20,
@@ -119,7 +119,7 @@ class _Container1State extends State<Container1> {
                     Text(
                       '— Web, iOs and Android',
                       style:
-                          TextStyle(color: Colors.grey.shade600, fontSize: 16),
+                          TextStyle(color: Colors.grey.shade400, fontSize: 16),
                     )
                   ],
                 )
