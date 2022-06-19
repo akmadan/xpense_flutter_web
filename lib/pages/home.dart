@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xpense_flutter_web/pages/containers/container1.dart';
+import 'package:xpense_flutter_web/pages/containers/container2.dart';
 import 'package:xpense_flutter_web/utils/constants.dart';
 import 'package:xpense_flutter_web/widgets/navBar.dart';
 
@@ -24,7 +25,8 @@ class _HomeState extends State<Home> {
             SizedBox(
               height: 100,
             ),
-            Container1()
+            Container1(),
+            Container2()
             // MainContent()
           ],
         ),
