@@ -32,8 +32,10 @@ Widget CommonContainer(String s1, s2, s3, image, bool imageLeft) {
               Text(
                 s2,
                 textAlign: imageLeft ? TextAlign.right : TextAlign.left,
-                style:
-                    TextStyle(fontSize: w! / 20, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: w! / 20,
+                    fontWeight: FontWeight.bold,
+                    height: 1.2),
               ),
               Text(
                 s3,

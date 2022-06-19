@@ -76,7 +76,7 @@ class _Container1State extends State<Container1> {
 
   Widget DesktopContainer1() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 10),
+      margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -88,8 +88,10 @@ class _Container1State extends State<Container1> {
               children: [
                 Text(
                   'Track your \nExpenses to \nSave Money',
-                  style:
-                      TextStyle(fontSize: w! / 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: w! / 20,
+                      fontWeight: FontWeight.bold,
+                      height: 1.2),
                 ),
                 SizedBox(
                   height: 20,
