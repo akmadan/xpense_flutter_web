@@ -19,61 +19,43 @@ class _Container2State extends State<Container2> {
     );
   }
 
-  //================ MOBILE ===============
-
+//=========== MOBILE ===========
   Widget MobileContainer2() {
     return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(color: AppColors.primary),
       child: Column(
         children: [
           Container(
-            height: w! / 1.2,
-            width: w! / 1.2,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(illustration1), fit: BoxFit.contain)),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            'Track your \nExpenses to \nSave Money',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: w! / 10, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
-            'Helps you to organize your income and expenses',
-            style: TextStyle(color: Colors.grey.shade600, fontSize: 16),
-          ),
-          SizedBox(
-            height: 30,
+            padding: EdgeInsets.only(left: 20, right: 20, bottom: 0, top: 20),
+            child: Container(
+              height: 195,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(dashboard), fit: BoxFit.contain)),
+            ),
           ),
           Container(
-            height: 45,
-            child: ElevatedButton.icon(
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(AppColors.primary)),
-                onPressed: () {},
-                icon: Icon(Icons.arrow_drop_down),
-                label: Text('Try a Demo')),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            '— Web, iOs and Android',
-            style: TextStyle(color: Colors.grey.shade600, fontSize: 16),
+            width: double.infinity,
+            color: Colors.white,
+            padding: EdgeInsets.symmetric(vertical: 40),
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                companyLogo(fb),
+                companyLogo(google),
+                companyLogo(cocacola),
+                companyLogo(samsung)
+              ],
+            ),
           )
         ],
       ),
     );
   }
 
-  //============== DESKTOP =============
-
+//=========== DESKTOP ===========
   Widget DesktopContainer2() {
     return Container(
       height: 900,
@@ -82,33 +64,53 @@ class _Container2State extends State<Container2> {
       child: Column(
         children: [
           Expanded(
-            child: Stack(
-              children: [
-                // Positioned(child: )
-                Positioned(
-                  left: 43,
-                  right: 43,
-                  bottom: 0,
+              child: Stack(
+            children: [
+              Positioned(
+                  top: -20,
+                  right: -20,
                   child: Container(
-                    width: double.infinity,
-                    height: 625,
+                    height: 320,
+                    width: 320,
                     decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage(dashboard))),
-                  ),
-                )
-              ],
-            ),
-          ),
+                      image: DecorationImage(
+                          image: AssetImage(vector1), fit: BoxFit.contain),
+                    ),
+                  )),
+              Positioned(
+                  bottom: -20,
+                  left: -20,
+                  child: Container(
+                    height: 320,
+                    width: 320,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(vector2), fit: BoxFit.contain),
+                    ),
+                  )),
+              Positioned(
+                left: 43,
+                right: 43,
+                bottom: 0,
+                child: Container(
+                  width: double.infinity,
+                  height: 712,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage(dashboard))),
+                ),
+              )
+            ],
+          )),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 40),
             color: Colors.white,
+            padding: EdgeInsets.symmetric(vertical: 40),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                companyLogos(fb),
-                companyLogos(google),
-                companyLogos(cocacola),
-                companyLogos(samsung)
+                companyLogo(fb),
+                companyLogo(google),
+                companyLogo(cocacola),
+                companyLogo(samsung)
               ],
             ),
           )
@@ -117,14 +119,14 @@ class _Container2State extends State<Container2> {
     );
   }
 
-  //============= WIDGETS ==========
-  Widget companyLogos(String image) {
+  Widget companyLogo(String image) {
     return Container(
       width: 160,
       height: 36,
+      margin: EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
-          image:
-              DecorationImage(image: AssetImage(image), fit: BoxFit.contain)),
+        image: DecorationImage(image: AssetImage(image), fit: BoxFit.contain),
+      ),
     );
   }
 }

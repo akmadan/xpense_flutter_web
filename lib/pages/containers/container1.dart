@@ -25,6 +25,7 @@ class _Container1State extends State<Container1> {
 
   Widget MobileContainer1() {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 20),
       child: Column(
         children: [
           Container(
@@ -40,13 +41,15 @@ class _Container1State extends State<Container1> {
           Text(
             'Track your \nExpenses to \nSave Money',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: w! / 10, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: w! / 10, fontWeight: FontWeight.bold, height: 1),
           ),
           SizedBox(
             height: 5,
           ),
           Text(
             'Helps you to organize your income and expenses',
+            textAlign: TextAlign.center,
             style: TextStyle(color: Colors.grey.shade600, fontSize: 16),
           ),
           SizedBox(
@@ -88,51 +91,45 @@ class _Container1State extends State<Container1> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                entryWidget(
-                  Text(
-                    'Track your \nExpenses to \nSave Money',
-                    style: TextStyle(
-                        fontSize: w! / 20,
-                        fontWeight: FontWeight.bold,
-                        height: 1.2),
-                  ),
+                Text(
+                  'Track your \nExpenses to \nSave Money',
+                  style: TextStyle(
+                      fontSize: w! / 20,
+                      fontWeight: FontWeight.bold,
+                      height: 1),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                entryWidget(
-                  Text(
-                    'Helps you to organize your income and expenses',
-                    style: TextStyle(color: Colors.grey.shade400, fontSize: 16),
-                  ),
+                Text(
+                  'Helps you to organize your income and expenses',
+                  style: TextStyle(color: Colors.grey.shade400, fontSize: 16),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                entryWidget(
-                  Row(
-                    children: [
-                      Container(
-                        height: 45,
-                        child: ElevatedButton.icon(
-                            style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                    AppColors.primary)),
-                            onPressed: () {},
-                            icon: Icon(Icons.arrow_drop_down),
-                            label: Text('Try a Demo')),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        '— Web, iOs and Android',
-                        style: TextStyle(
-                            color: Colors.grey.shade400, fontSize: 16),
-                      )
-                    ],
-                  ),
-                )
+                Row(
+                  children: [
+                    Container(
+                      height: 45,
+                      child: ElevatedButton.icon(
+                          style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all(AppColors.primary)),
+                          onPressed: () {},
+                          icon: Icon(Icons.arrow_drop_down),
+                          label: Text('Try a Demo')),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      '— Web, iOs and Android',
+                      style:
+                          TextStyle(color: Colors.grey.shade400, fontSize: 16),
+                    )
+                  ],
+                ),
               ],
             ),
           )),
