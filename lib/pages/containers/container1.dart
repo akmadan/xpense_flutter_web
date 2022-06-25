@@ -134,14 +134,13 @@ class _Container1State extends State<Container1> {
             ),
           )),
           Expanded(
-              child: entryWidget(
-            Container(
+            child: Container(
               height: 530,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(illustration1), fit: BoxFit.contain)),
             ),
-          )),
+          ),
         ],
       ),
     );

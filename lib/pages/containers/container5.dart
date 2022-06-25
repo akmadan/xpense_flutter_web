@@ -23,7 +23,12 @@ class _Container5State extends State<Container5> {
   //================ MOBILE ===============
 
   Widget MobileContainer5() {
-    return Container();
+    return CommonContainerMobile(
+        'USE ANYTIME',
+        'Use anytime \nwhen you \nneed',
+        'Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim accumsan nisi, tincidunt vel. Enim ipsum, amet quis ullamcorper eget ut.',
+        illustration3,
+        false);
   }
 
   //============== DESKTOP =============

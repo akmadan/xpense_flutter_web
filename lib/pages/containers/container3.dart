@@ -23,7 +23,12 @@ class _Container3State extends State<Container3> {
   //================ MOBILE ===============
 
   Widget MobileContainer3() {
-    return Container();
+    return CommonContainerMobile(
+        'ALWAYS ONLINE',
+        'Real-time \nsupport \nwith cloud',
+        'Tellus lacus morbi sagittis lacus in. Amet nisl at mauris enim accumsan nisi, tincidunt vel. Enim ipsum, amet quis ullamcorper eget ut.',
+        illustration1,
+        false);
   }
 
   //============== DESKTOP =============
